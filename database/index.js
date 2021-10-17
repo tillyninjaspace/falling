@@ -4,18 +4,9 @@ const pgp = require('pg-promise')();
 const db = {}
 db.conn = pgp(connectionString);
 
-//DOES NOT NEED ANYTHING BELOW LINE 5 at all!
-
-// async function rebuild() {
-//     try {
-//         client.connect();
-//         await createTables();
-//         console.log("Finished Rebuild")
-//     } catch(error) {
-//         console.error("Rebuild Error")
-//         throw error;
-//     }
-// };
+//DOES NOT NEED ANYTHING BELOW LINE 5. This is just a back up file.
+//When using pg-promise, I don't need to connect to client in the server
+//in the listen at the bottom.
 
 const createTables = () => {
     try {
