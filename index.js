@@ -20,6 +20,7 @@ const {
     GraphQLList,
     GraphQLSchema
  } = graphql;
+
  const PersonType = new GraphQLObjectType({
     name: 'Person',
     fields: () => ({
@@ -67,7 +68,7 @@ const {
              });
        }
     },
-    emails: {
+       emails: {
        type: EmailType,
        args: { id: { type: GraphQLID } },
        resolve(parentValue, args) {
